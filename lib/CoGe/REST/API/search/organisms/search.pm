@@ -7,7 +7,6 @@ use Class::Std::Utils;
 use CoGe::REST::Handler;
 use CoGeX;
 use CoGeX::ResultSet::Organism;
-use JSON;
 
 use base 'CoGe::REST::Handler';
 {
