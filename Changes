@@ -1,0 +1,6 @@
+Revision history for Perl extension CoGe::REST.
+
+0.01  Thu Sep 16 15:27:19 2010  Dennis Roberts
+	- original version; created by h2xs 1.23 with options
+		-AXn CoGe::REST
+

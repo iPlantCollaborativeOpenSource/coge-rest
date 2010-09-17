@@ -1,0 +1,28 @@
+CoGe-REST version 0.01
+======================
+
+RESTful API that may be used to access CoGe.
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+TODO: list dependencies.
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2010 by iPlant Collaborative
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.9 or,
+at your option, any later version of Perl 5 you may have available.
+
