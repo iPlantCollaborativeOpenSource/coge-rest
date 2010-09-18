@@ -183,6 +183,9 @@ PERL_ARCHIVE_AFTER =
 
 TO_INST_PM = lib/CoGe/REST.pm \
 	lib/CoGe/REST/API.pm \
+	lib/CoGe/REST/API/get.pm \
+	lib/CoGe/REST/API/get/organism.pm \
+	lib/CoGe/REST/API/get/organism/id.pm \
 	lib/CoGe/REST/API/search.pm \
 	lib/CoGe/REST/API/search/organisms.pm \
 	lib/CoGe/REST/API/search/organisms/search.pm \
@@ -190,16 +193,22 @@ TO_INST_PM = lib/CoGe/REST.pm \
 
 PM_TO_BLIB = lib/CoGe/REST/API/search/organisms.pm \
 	blib/lib/CoGe/REST/API/search/organisms.pm \
-	lib/CoGe/REST.pm \
-	blib/lib/CoGe/REST.pm \
-	lib/CoGe/REST/API/search.pm \
-	blib/lib/CoGe/REST/API/search.pm \
-	lib/CoGe/REST/Handler.pm \
-	blib/lib/CoGe/REST/Handler.pm \
+	lib/CoGe/REST/API/get/organism.pm \
+	blib/lib/CoGe/REST/API/get/organism.pm \
 	lib/CoGe/REST/API/search/organisms/search.pm \
 	blib/lib/CoGe/REST/API/search/organisms/search.pm \
 	lib/CoGe/REST/API.pm \
-	blib/lib/CoGe/REST/API.pm
+	blib/lib/CoGe/REST/API.pm \
+	lib/CoGe/REST/API/get/organism/id.pm \
+	blib/lib/CoGe/REST/API/get/organism/id.pm \
+	lib/CoGe/REST.pm \
+	blib/lib/CoGe/REST.pm \
+	lib/CoGe/REST/API/get.pm \
+	blib/lib/CoGe/REST/API/get.pm \
+	lib/CoGe/REST/Handler.pm \
+	blib/lib/CoGe/REST/Handler.pm \
+	lib/CoGe/REST/API/search.pm \
+	blib/lib/CoGe/REST/API/search.pm
 
 
 # --- MakeMaker platform_constants section:
@@ -813,11 +822,14 @@ ppd :
 pm_to_blib : $(FIRST_MAKEFILE) $(TO_INST_PM)
 	$(NOECHO) $(ABSPERLRUN) -MExtUtils::Install -e 'pm_to_blib({@ARGV}, '\''$(INST_LIB)/auto'\'', q[$(PM_FILTER)], '\''$(PERM_DIR)'\'')' -- \
 	  lib/CoGe/REST/API/search/organisms.pm blib/lib/CoGe/REST/API/search/organisms.pm \
-	  lib/CoGe/REST.pm blib/lib/CoGe/REST.pm \
-	  lib/CoGe/REST/API/search.pm blib/lib/CoGe/REST/API/search.pm \
-	  lib/CoGe/REST/Handler.pm blib/lib/CoGe/REST/Handler.pm \
+	  lib/CoGe/REST/API/get/organism.pm blib/lib/CoGe/REST/API/get/organism.pm \
 	  lib/CoGe/REST/API/search/organisms/search.pm blib/lib/CoGe/REST/API/search/organisms/search.pm \
-	  lib/CoGe/REST/API.pm blib/lib/CoGe/REST/API.pm 
+	  lib/CoGe/REST/API.pm blib/lib/CoGe/REST/API.pm \
+	  lib/CoGe/REST/API/get/organism/id.pm blib/lib/CoGe/REST/API/get/organism/id.pm \
+	  lib/CoGe/REST.pm blib/lib/CoGe/REST.pm \
+	  lib/CoGe/REST/API/get.pm blib/lib/CoGe/REST/API/get.pm \
+	  lib/CoGe/REST/Handler.pm blib/lib/CoGe/REST/Handler.pm \
+	  lib/CoGe/REST/API/search.pm blib/lib/CoGe/REST/API/search.pm 
 	$(NOECHO) $(TOUCH) pm_to_blib
 
 

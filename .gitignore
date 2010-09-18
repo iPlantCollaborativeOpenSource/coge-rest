@@ -3,3 +3,6 @@
 
 # Ignore anything with a .bak extension.
 *.bak
+
+# Ignore the blib directory and its contents.
+blib

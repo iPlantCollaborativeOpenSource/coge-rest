@@ -1,4 +1,4 @@
-package CoGe::REST::API::search;
+package CoGe::REST::API::get;
 
 use warnings;
 use strict;

@@ -38,7 +38,6 @@ use base 'CoGe::REST::Handler';
         my $coge      = CoGeX->dbconnect();
         my @organisms = $coge->resultset('Organism')->resolve($search_string);
 
-        my $json = JSON->new();
         $response->data()->{'item'}
             = [ map { { $_->get_columns() } } @organisms ];
 
