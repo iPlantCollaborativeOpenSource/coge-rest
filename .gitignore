@@ -1,8 +1,8 @@
-# Ignore Emacs backup files.
+# Ignore backup files.
 *~
-
-# Ignore anything with a .bak extension.
 *.bak
 
-# Ignore the blib directory and its contents.
+# Ignore generated files and directories.
+Makefile
 blib
+pm_to_blib
