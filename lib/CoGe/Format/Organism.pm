@@ -7,6 +7,7 @@ use Apache2::URI;
 use Apache2::REST::Handler;
 use Class::Std::Utils;
 
+use interface 'CoGe::Format';
 use base 'Apache2::REST::Handler';
 {
     sub new {
