@@ -6,6 +6,12 @@ use strict;
 use Apache2::URI;
 use Apache2::REST::Handler;
 use Class::Std::Utils;
+use Readonly;
+
+Readonly my %URL_PATTERN_FOR => (
+    'organism_url' => '/coge/get/organism/${organism_id}',
+    'genomes_url'  => '/coge/get/organism/${organism_id}/genomes',
+);
 
 use interface 'CoGe::Format';
 use base 'Apache2::REST::Handler';
@@ -25,14 +31,12 @@ use base 'Apache2::REST::Handler';
         # Build the initial hash.
         my %hash = $organism_ref->get_columns();
 
-        # Add the URL used to access the organism.
-        my $organism_id  = $organism_ref->id();
-        my $organism_url = $request->construct_url("/coge/get/$organism_id");
-        $hash{'organism_url'} = $organism_url;
-
-        # Add the URL used to access the organism's genomes.
-        my $genomes_url = "$organism_url/genomes";
-        $hash{'genomes_url'} = $genomes_url;
+        # Add any URLs that we're supposed to define.
+        for my $url_name ( keys %URL_PATTERN_FOR ) {
+            my $url = $URL_PATTERN_FOR{$url_name};
+            $url =~ s/ \$ \{ ([^}]+) \} /$hash{$1}/cgxms;
+            $hash{$url_name} = $request->construct_url($url);
+        }
 
         return \%hash;
     }
