@@ -6,7 +6,7 @@ use strict;
 
 #########################
 
-use Test::More tests => 12;
+use Test::More tests => 14;
 BEGIN { use_ok('CoGe::REST') };
 BEGIN { use_ok('CoGe::REST::API') };
 BEGIN { use_ok('CoGe::REST::Handler') };
@@ -19,6 +19,8 @@ BEGIN { use_ok('CoGe::REST::API::search') };
 BEGIN { use_ok('CoGe::REST::API::search::organisms') };
 BEGIN { use_ok('CoGe::REST::API::search::organisms::by_name') };
 BEGIN { use_ok('CoGe::REST::API::search::organisms::by_description') };
+BEGIN { use_ok('CoGe::Format') };
+BEGIN { use_ok('CoGe::Format::Organism') };
 
 #########################
 

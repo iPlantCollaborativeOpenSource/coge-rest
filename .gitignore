@@ -1,6 +1,7 @@
 # Ignore backup files.
 *~
 *.bak
+.#*
 
 # Ignore generated files and directories.
 Makefile

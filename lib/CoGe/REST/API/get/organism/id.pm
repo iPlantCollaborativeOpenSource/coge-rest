@@ -5,8 +5,9 @@ use strict;
 
 use Apache2::Log;
 use Apache2::Const -compile => qw(OK :log);
-use APR::Const     -compile => qw(:error SUCCESS);
+use APR::Const -compile     => qw(:error SUCCESS);
 use Class::Std::Utils;
+use CoGe::Format::Organism;
 use CoGe::REST::Handler;
 use CoGe::REST::API::get::organism::id::current_genome;
 use CoGe::REST::API::get::organism::id::genomes;
@@ -43,7 +44,9 @@ use base 'CoGe::REST::Handler';
 
         my ($organism) = $coge->resultset("Organism")->find($organism_id);
         if ( defined $organism ) {
-            $response->data()->{'item'} = { $organism->get_columns() };
+            my $format = CoGe::Format::Organism->new();
+            $response->data()->{'item'}
+                = $format->build_hash( $request, $organism );
         }
 
         my $status_code

@@ -5,6 +5,7 @@ use strict;
 
 use Apache2::URI;
 use Class::Std::Utils;
+use CoGe::Format::Organism;
 use CoGe::REST::Handler;
 use CoGeX;
 use CoGeX::ResultSet::Organism;
@@ -49,29 +50,12 @@ use base 'CoGe::REST::Handler';
             {} );
 
         # Format the result.
+        my $format = CoGe::Format::Organism->new();
         my @organism_hashes
-            = map { format_organism_hash( $request, $_ ) } @organisms;
+            = map { $format->build_hash( $request, $_ ) } @organisms;
         $response->data()->{'item'} = \@organism_hashes;
 
         return Apache2::Const::HTTP_OK;
-    }
-
-    sub format_organism_hash {
-        my ( $request, $organism_ref ) = @_;
-
-        # Build the initial hash.
-        my %hash = $organism_ref->get_columns();
-
-        # Add the URL used to access the organism.
-        my $organism_id  = $organism_ref->id();
-        my $organism_url = $request->construct_url("/coge/get/$organism_id");
-        $hash{'organism_url'} = $organism_url;
-
-        # Add the URL used to access the organism's genomes.
-        my $genomes_url = "$organism_url/genomes";
-        $hash{'genomes_url'} = $genomes_url;
-
-        return \%hash;
     }
 
     sub buildNext {
