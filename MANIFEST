@@ -1,5 +1,6 @@
 Changes
 lib/CoGe/Format.pm
+lib/CoGe/Format/Genome.pm
 lib/CoGe/Format/Organism.pm
 lib/CoGe/REST.pm
 lib/CoGe/REST/AbstractObjectGetter.pm

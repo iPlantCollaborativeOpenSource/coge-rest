@@ -4,47 +4,32 @@ use warnings;
 use strict;
 
 use Class::Std::Utils;
-use CoGe::REST::Handler;
+use CoGe::Format::Genome;
+use CoGe::REST::AbstractObjectGetter;
 use CoGeX;
 
-use base 'CoGe::REST::Handler';
+use base 'CoGe::REST::AbstractObjectGetter';
 {
-    my %parent_of;
-    my %organism_id_of;
-
     sub new {
-        my ( $class, $parent, $organism_id ) = @_;
-        my $self = $class->SUPER::new();
+        my ( $class, $parent, $id ) = @_;
 
-        $parent_of{ ident $self}      = $parent;
-        $organism_id_of{ ident $self} = $organism_id;
+        # Create the formatter used to format obects that we retrieve.
+        my $formatter = CoGe::Format::Genome->new();
+
+        # Create the new class instance.
+        my $self = $class->SUPER::new( $parent, $id, $formatter );
 
         return $self;
     }
 
-    sub DESTROY {
-        my ($self) = @_;
-        delete $parent_of{ ident $self};
-        delete $organism_id_of{ ident $self};
-    }
+    sub get_object {
+        my ( $self, $id ) = @_;
 
-    sub GET {
-        my ( $self, $request, $response ) = @_;
-        $self->SUPER::GET( $request, $response );
-
-        my $organism_id = $organism_id_of{ ident $self };
-
+        # Find the matching object.
         my $coge = CoGeX->dbconnect();
+        my ($organism) = $coge->resultset('Organism')->find($id);
 
-        my ($organism) = $coge->resultset("Organism")->find($organism_id);
-        if ( defined $organism ) {
-            $response->data()->{'item'} = { $organism->current_genome()->get_columns() };
-        }
-
-        my $status_code
-            = defined $organism
-            ? Apache2::Const::HTTP_OK
-            : Apache2::Const::NOT_FOUND;
+        return defined $organism ? $organism->current_genome() : undef;
     }
 }
 

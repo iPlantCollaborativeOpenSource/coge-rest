@@ -6,7 +6,10 @@ use strict;
 
 #########################
 
-use Test::More tests => 16;
+use Test::More tests => 17;
+BEGIN { use_ok('CoGe::Format') };
+BEGIN { use_ok('CoGe::Format::Genome') };
+BEGIN { use_ok('CoGe::Format::Organism') };
 BEGIN { use_ok('CoGe::REST') };
 BEGIN { use_ok('CoGe::REST::API') };
 BEGIN { use_ok('CoGe::REST::AbstractObjectGetter') };
@@ -21,8 +24,6 @@ BEGIN { use_ok('CoGe::REST::API::search') };
 BEGIN { use_ok('CoGe::REST::API::search::organisms') };
 BEGIN { use_ok('CoGe::REST::API::search::organisms::by_name') };
 BEGIN { use_ok('CoGe::REST::API::search::organisms::by_description') };
-BEGIN { use_ok('CoGe::Format') };
-BEGIN { use_ok('CoGe::Format::Organism') };
 
 #########################
 
