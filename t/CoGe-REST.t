@@ -6,9 +6,10 @@ use strict;
 
 #########################
 
-use Test::More tests => 14;
+use Test::More tests => 15;
 BEGIN { use_ok('CoGe::REST') };
 BEGIN { use_ok('CoGe::REST::API') };
+BEGIN { use_ok('CoGe::REST::AbstractSearch') };
 BEGIN { use_ok('CoGe::REST::Handler') };
 BEGIN { use_ok('CoGe::REST::API::get') };
 BEGIN { use_ok('CoGe::REST::API::get::organism') };

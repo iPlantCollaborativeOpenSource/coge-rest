@@ -3,60 +3,32 @@ package CoGe::REST::API::search::organisms::by_name;
 use warnings;
 use strict;
 
-use Apache2::URI;
-use Class::Std::Utils;
 use CoGe::Format::Organism;
-use CoGe::REST::Handler;
+use CoGe::REST::AbstractSearch;
 use CoGeX;
 use CoGeX::ResultSet::Organism;
 
-use base 'CoGe::REST::Handler';
+use base 'CoGe::REST::AbstractSearch';
 {
-    my %search_string_of;
 
     sub new {
         my ( $class, $parent, $search_string ) = @_;
 
-        # Create the new class instance.
-        my $self = $class->SUPER::new();
+        # Create the formatter for this search.
+        my $formatter = CoGe::Format::Organism->new();
 
-        # Set the attributes.
-        $search_string_of{ ident $self} = $search_string;
+        # Create the new class instance.
+        my $self = $class->SUPER::new( $parent, $search_string, $formatter );
 
         return $self;
     }
 
-    sub DESTROY {
-        my ($self) = @_;
-
-        # Delete the attributes for the object being destroyed.
-        delete $search_string_of{ ident $self};
-    }
-
-    sub GET {
-        my ( $self, $request, $response ) = @_;
-        $self->SUPER::GET( $request, $response );
-
-        # Fetch the search string.
-        my $search_string = $search_string_of{ ident $self };
-        return Apache2::Const::HTTP_BAD_REQUEST if !defined $search_string;
+    sub perform_search {
+        my ( $self, $search_string ) = @_;
 
         # Find matching organisms.
-        my $coge      = CoGeX->dbconnect();
-        my @organisms = $coge->resultset('Organism')->resolve($search_string);
-
-        # Format the result.
-        my $format = CoGe::Format::Organism->new();
-        my @organism_hashes
-            = map { $format->build_hash( $request, $_ ) } @organisms;
-        $response->data()->{'item'} = \@organism_hashes;
-
-        return Apache2::Const::HTTP_OK;
-    }
-
-    sub buildNext {
-        my ( $self, $frag, $req ) = @_;
-        return __PACKAGE__->new( $self, $frag );
+        my $coge = CoGeX->dbconnect();
+        return $coge->resultset('Organism')->resolve($search_string);
     }
 }
 
