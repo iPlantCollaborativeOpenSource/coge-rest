@@ -4,6 +4,8 @@ lib/CoGe/REST/API.pm
 lib/CoGe/REST/API/get.pm
 lib/CoGe/REST/API/get/organism.pm
 lib/CoGe/REST/API/get/organism/id.pm
+lib/CoGe/REST/API/get/organism/id/current_genome.pm
+lib/CoGe/REST/API/get/organism/id/genomes.pm
 lib/CoGe/REST/API/search.pm
 lib/CoGe/REST/API/search/organisms.pm
 lib/CoGe/REST/API/search/organisms/search.pm

@@ -1,15 +1,10 @@
-package CoGe::REST::API::get::organism::id;
+package CoGe::REST::API::get::organism::id::current_genome;
 
 use warnings;
 use strict;
 
-use Apache2::Log;
-use Apache2::Const -compile => qw(OK :log);
-use APR::Const     -compile => qw(:error SUCCESS);
 use Class::Std::Utils;
 use CoGe::REST::Handler;
-use CoGe::REST::API::get::organism::id::current_genome;
-use CoGe::REST::API::get::organism::id::genomes;
 use CoGeX;
 
 use base 'CoGe::REST::Handler';
@@ -43,7 +38,7 @@ use base 'CoGe::REST::Handler';
 
         my ($organism) = $coge->resultset("Organism")->find($organism_id);
         if ( defined $organism ) {
-            $response->data()->{'item'} = { $organism->get_columns() };
+            $response->data()->{'item'} = { $organism->current_genome()->get_columns() };
         }
 
         my $status_code
@@ -55,12 +50,6 @@ use base 'CoGe::REST::Handler';
     sub isAuth {
         my ( $self, $method, $request ) = @_;
         return $method eq 'GET' ? 1 : 0;
-    }
-
-    sub buildNext {
-        my ( $self, $frag, $req ) = @_;
-        my $package = "CoGe::REST::API::get::organism::id::$frag";
-        return $package->new( $self, $organism_id_of{ ident $self } );
     }
 }
 
