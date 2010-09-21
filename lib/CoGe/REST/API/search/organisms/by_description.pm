@@ -1,4 +1,4 @@
-package CoGe::REST::API::search::organisms::search;
+package CoGe::REST::API::search::organisms::by_description;
 
 use warnings;
 use strict;
@@ -11,7 +11,6 @@ use CoGeX::ResultSet::Organism;
 
 use base 'CoGe::REST::Handler';
 {
-    my %parent_of;
     my %search_string_of;
 
     sub new {
@@ -21,7 +20,6 @@ use base 'CoGe::REST::Handler';
         my $self = $class->SUPER::new();
 
         # Set the attributes.
-        $parent_of{ ident $self}        = $parent;
         $search_string_of{ ident $self} = $search_string;
 
         return $self;
@@ -31,7 +29,6 @@ use base 'CoGe::REST::Handler';
         my ($self) = @_;
 
         # Delete the attributes for the object being destroyed.
-        delete $parent_of{ ident $self};
         delete $search_string_of{ ident $self};
     }
 
@@ -41,10 +38,15 @@ use base 'CoGe::REST::Handler';
 
         # Fetch the search string.
         my $search_string = $search_string_of{ ident $self };
+        return Apache2::Const::HTTP_BAD_REQUEST if !defined $search_string;
 
         # Find matching organisms.
-        my $coge      = CoGeX->dbconnect();
-        my @organisms = $coge->resultset('Organism')->resolve($search_string);
+        my $coge = CoGeX->dbconnect();
+        my @organisms
+            = $coge->resultset('Organism')
+            ->search(
+            { 'description' => { '-like' => '%' . $search_string . '%' } },
+            {} );
 
         # Format the result.
         my @organism_hashes
@@ -72,10 +74,11 @@ use base 'CoGe::REST::Handler';
         return \%hash;
     }
 
-    sub isAuth {
-        my ( $self, $method, $request ) = @_;
-        return $method eq 'GET' ? 1 : 0;
+    sub buildNext {
+        my ( $self, $frag, $req ) = @_;
+        return __PACKAGE__->new( $self, $frag );
     }
 }
 
 1;
+

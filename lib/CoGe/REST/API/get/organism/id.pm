@@ -52,11 +52,6 @@ use base 'CoGe::REST::Handler';
             : Apache2::Const::NOT_FOUND;
     }
 
-    sub isAuth {
-        my ( $self, $method, $request ) = @_;
-        return $method eq 'GET' ? 1 : 0;
-    }
-
     sub buildNext {
         my ( $self, $frag, $req ) = @_;
         my $package = "CoGe::REST::API::get::organism::id::$frag";

@@ -14,9 +14,4 @@ sub GET {
     return Apache2::Const::HTTP_OK;
 }
 
-sub isAuth {
-    my ( $self, $method, $request ) = @_;
-    return $method eq 'GET' ? 1 : 0;
-}
-
 1;

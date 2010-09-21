@@ -13,4 +13,9 @@ sub GET {
     return;
 }
 
+sub isAuth {
+    my ( $self, $method, $request ) = @_;
+    return $method eq 'GET' ? 1 : 0;
+}
+
 1;

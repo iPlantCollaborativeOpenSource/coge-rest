@@ -53,11 +53,6 @@ use base 'CoGe::REST::Handler';
             ? Apache2::Const::HTTP_OK
             : Apache2::Const::NOT_FOUND;
     }
-
-    sub isAuth {
-        my ( $self, $method, $request ) = @_;
-        return $method eq 'GET' ? 1 : 0;
-    }
 }
 
 1;
