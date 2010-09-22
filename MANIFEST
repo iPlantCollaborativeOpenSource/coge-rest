@@ -11,6 +11,8 @@ lib/CoGe/REST/AbstractObjectListGetter.pm
 lib/CoGe/REST/AbstractSearch.pm
 lib/CoGe/REST/API.pm
 lib/CoGe/REST/API/get.pm
+lib/CoGe/REST/API/get/dataset.pm
+lib/CoGe/REST/API/get/dataset/id.pm
 lib/CoGe/REST/API/get/genome.pm
 lib/CoGe/REST/API/get/genome/id.pm
 lib/CoGe/REST/API/get/genome/id/datasets.pm
