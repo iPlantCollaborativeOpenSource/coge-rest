@@ -6,8 +6,12 @@ use strict;
 use CoGe::Format;
 use Readonly;
 
+Readonly my $DATA_SOURCE => '/coge/get/data_source/';
+Readonly my $DATASET     => '/coge/get/dataset/';
+
 Readonly my %URL_PATTERN_FOR => (
-    'data_source_url' => '/coge/get/data_source/${data_source_id}',
+    'data_source_url'     => $DATA_SOURCE . '${data_source_id}',
+    'feature_summary_url' => $DATASET . '${dataset_id}/feature_summary',
 );
 
 use base 'CoGe::Format';
