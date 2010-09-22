@@ -1,5 +1,6 @@
 Changes
 lib/CoGe/Format.pm
+lib/CoGe/Format/Dataset.pm
 lib/CoGe/Format/Genome.pm
 lib/CoGe/Format/GenomicSequence.pm
 lib/CoGe/Format/GenomicSequenceType.pm
@@ -12,6 +13,7 @@ lib/CoGe/REST/API.pm
 lib/CoGe/REST/API/get.pm
 lib/CoGe/REST/API/get/genome.pm
 lib/CoGe/REST/API/get/genome/id.pm
+lib/CoGe/REST/API/get/genome/id/datasets.pm
 lib/CoGe/REST/API/get/genome/id/genomic_sequences.pm
 lib/CoGe/REST/API/get/genomic_sequence_type.pm
 lib/CoGe/REST/API/get/genomic_sequence_type/id.pm
