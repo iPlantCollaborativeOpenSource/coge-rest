@@ -30,16 +30,6 @@ use base 'CoGe::REST::AbstractObjectGetter';
 
         return $genome;
     }
-
-    sub buildNext {
-        my ( $self, $frag, $req ) = @_;
-
-        # Determine the package of the next handler in the chain.
-        my $current_package = ref $self;
-        my $package = "${current_package}::$frag";
-        
-        return $package->new( $self->get_id() );
-    }
 }
 
 1;
