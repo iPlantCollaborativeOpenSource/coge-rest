@@ -12,13 +12,13 @@ use CoGeX;
 use base 'CoGe::REST::AbstractObjectGetter';
 {
     sub new {
-        my ( $class, $parent, $id ) = @_;
+        my ( $class, $id ) = @_;
 
         # Create the formatter for objects that we fetch.
         my $formatter = CoGe::Format::Organism->new();
 
         # Create the class instance.
-        my $self = $class->SUPER::new( $parent, $id, $formatter );
+        my $self = $class->SUPER::new( $id, $formatter );
 
         return $self;
     }
@@ -40,7 +40,7 @@ use base 'CoGe::REST::AbstractObjectGetter';
         my $current_package = ref $self;
         my $package = "${current_package}::$frag";
         
-        return $package->new( $self, $self->get_id() );
+        return $package->new( $self->get_id() );
     }
 }
 

@@ -17,7 +17,7 @@ use base 'CoGe::REST::Handler';
     }
 
     sub new {
-        my ( $class, $parent, $id, $formatter ) = @_;
+        my ( $class, $id, $formatter ) = @_;
 
         # Create the new class instance.
         my $self = $class->SUPER::new();

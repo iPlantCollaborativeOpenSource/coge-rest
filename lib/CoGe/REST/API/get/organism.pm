@@ -10,7 +10,7 @@ use base 'CoGe::REST::Handler';
 
 sub buildNext {
     my ( $self, $frag, $req ) = @_;
-    return CoGe::REST::API::get::organism::id->new( $self, $frag );
+    return CoGe::REST::API::get::organism::id->new( $frag );
 }
 
 1;
