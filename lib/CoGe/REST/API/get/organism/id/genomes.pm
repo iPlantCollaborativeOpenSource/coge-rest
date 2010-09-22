@@ -9,14 +9,12 @@ use CoGeX;
 
 use base 'CoGe::REST::Handler';
 {
-    my %parent_of;
     my %organism_id_of;
 
     sub new {
-        my ( $class, $parent, $organism_id ) = @_;
+        my ( $class, $organism_id ) = @_;
         my $self = $class->SUPER::new();
 
-        $parent_of{ ident $self}      = $parent;
         $organism_id_of{ ident $self} = $organism_id;
 
         return $self;
@@ -24,7 +22,6 @@ use base 'CoGe::REST::Handler';
 
     sub DESTROY {
         my ($self) = @_;
-        delete $parent_of{ ident $self};
         delete $organism_id_of{ ident $self};
     }
 

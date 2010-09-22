@@ -12,13 +12,13 @@ use base 'CoGe::REST::AbstractSearch';
 {
 
     sub new {
-        my ( $class, $parent, $search_string ) = @_;
+        my ( $class, $search_string ) = @_;
 
         # Create the formatter for this search.
         my $formatter = CoGe::Format::Organism->new();
 
         # Create the new class instance.
-        my $self = $class->SUPER::new( $parent, $search_string, $formatter );
+        my $self = $class->SUPER::new( $search_string, $formatter );
 
         return $self;
     }

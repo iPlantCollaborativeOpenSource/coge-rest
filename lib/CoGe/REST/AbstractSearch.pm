@@ -12,7 +12,7 @@ use base 'CoGe::REST::Handler';
     my %formatter_of;
 
     sub new {
-        my ( $class, $parent, $search_string, $formatter ) = @_;
+        my ( $class, $search_string, $formatter ) = @_;
 
         # Create the new class instance.
         my $self = $class->SUPER::new();
@@ -56,7 +56,7 @@ use base 'CoGe::REST::Handler';
     sub buildNext {
         my ( $self, $frag, $req ) = @_;
         my $package = ref $self;
-        return $package->new( $self, $frag );
+        return $package->new( $frag );
     }
 }
 
