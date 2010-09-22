@@ -4,6 +4,7 @@ lib/CoGe/Format/Genome.pm
 lib/CoGe/Format/Organism.pm
 lib/CoGe/REST.pm
 lib/CoGe/REST/AbstractObjectGetter.pm
+lib/CoGe/REST/AbstractObjectListGetter.pm
 lib/CoGe/REST/AbstractSearch.pm
 lib/CoGe/REST/API.pm
 lib/CoGe/REST/API/get.pm

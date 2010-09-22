@@ -6,13 +6,14 @@ use strict;
 
 #########################
 
-use Test::More tests => 17;
+use Test::More tests => 18;
 BEGIN { use_ok('CoGe::Format') };
 BEGIN { use_ok('CoGe::Format::Genome') };
 BEGIN { use_ok('CoGe::Format::Organism') };
 BEGIN { use_ok('CoGe::REST') };
 BEGIN { use_ok('CoGe::REST::API') };
 BEGIN { use_ok('CoGe::REST::AbstractObjectGetter') };
+BEGIN { use_ok('CoGe::REST::AbstractObjectListGetter') };
 BEGIN { use_ok('CoGe::REST::AbstractSearch') };
 BEGIN { use_ok('CoGe::REST::Handler') };
 BEGIN { use_ok('CoGe::REST::API::get') };
