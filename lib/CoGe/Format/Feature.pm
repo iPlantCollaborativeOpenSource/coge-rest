@@ -1,4 +1,4 @@
-package CoGe::Format::Dataset;
+package CoGe::Format::Feature;
 
 use warnings;
 use strict;
@@ -6,9 +6,7 @@ use strict;
 use CoGe::Format;
 use Readonly;
 
-Readonly my %URL_PATTERN_FOR => (
-    'data_source_url' => '/coge/get/data_source/${data_source_id}',
-);
+Readonly my %URL_PATTERN_FOR => ();
 
 use base 'CoGe::Format';
 {
