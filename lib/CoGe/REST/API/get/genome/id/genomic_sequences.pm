@@ -1,9 +1,9 @@
-package CoGe::REST::API::get::organism::id::genomes;
+package CoGe::REST::API::get::genome::id::genomic_sequences;
 
 use warnings;
 use strict;
 
-use CoGe::Format::Genome;
+use CoGe::Format::GenomicSequence;
 use CoGe::REST::AbstractObjectListGetter;
 use CoGeX;
 
@@ -14,7 +14,7 @@ use base 'CoGe::REST::AbstractObjectListGetter';
         my ( $class, $id ) = @_;
 
         # Create the formatter used to format objects that we fetch.
-        my $formatter = CoGe::Format::Genome->new();
+        my $formatter = CoGe::Format::GenomicSequence->new();
 
         # Create the new class instance.
         my $self = $class->SUPER::new( $id, $formatter );
@@ -25,13 +25,13 @@ use base 'CoGe::REST::AbstractObjectListGetter';
     sub get_objects {
         my ( $self, $id ) = @_;
 
-        # Fetch the organism.
-        my $coge     = CoGeX->dbconnect();
-        my $organism = $coge->resultset('Organism')->find($id);
-        return if !defined $organism;
+        # Fetch the dataset group.
+        my $coge   = CoGeX->dbconnect();
+        my $genome = $coge->resultset('DatasetGroup')->find($id);
+        return if !defined $genome;
 
-        # Return the list of genomes.
-        return [ grep { $_->version() >= 0 } $organism->dataset_groups() ];
+        # Return the list of genomic sequences.
+        return [ $genome->genomic_sequences() ];
     }
 }
 
