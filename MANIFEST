@@ -3,6 +3,7 @@ lib/CoGe/Format.pm
 lib/CoGe/Format/Dataset.pm
 lib/CoGe/Format/DataSource.pm
 lib/CoGe/Format/Feature.pm
+lib/CoGe/Format/FeatureSummary.pm
 lib/CoGe/Format/Genome.pm
 lib/CoGe/Format/GenomicSequence.pm
 lib/CoGe/Format/GenomicSequenceType.pm
@@ -17,6 +18,7 @@ lib/CoGe/REST/API/get/data_source.pm
 lib/CoGe/REST/API/get/data_source/id.pm
 lib/CoGe/REST/API/get/dataset.pm
 lib/CoGe/REST/API/get/dataset/id.pm
+lib/CoGe/REST/API/get/dataset/id/feature_summary.pm
 lib/CoGe/REST/API/get/dataset/id/features.pm
 lib/CoGe/REST/API/get/genome.pm
 lib/CoGe/REST/API/get/genome/id.pm

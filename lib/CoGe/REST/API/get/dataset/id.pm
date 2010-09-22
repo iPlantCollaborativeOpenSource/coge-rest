@@ -6,6 +6,7 @@ use strict;
 use CoGe::Format::Dataset;
 use CoGe::REST::AbstractObjectGetter;
 use CoGe::REST::API::get::dataset::id::features;
+use CoGe::REST::API::get::dataset::id::feature_summary;
 use CoGeX;
 
 use base 'CoGe::REST::AbstractObjectGetter';

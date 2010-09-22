@@ -6,11 +6,12 @@ use strict;
 
 #########################
 
-use Test::More tests => 34;
+use Test::More tests => 36;
 BEGIN { use_ok('CoGe::Format') };
 BEGIN { use_ok('CoGe::Format::Dataset') };
 BEGIN { use_ok('CoGe::Format::DataSource') };
 BEGIN { use_ok('CoGe::Format::Feature') };
+BEGIN { use_ok('CoGe::Format::FeatureSummary') };
 BEGIN { use_ok('CoGe::Format::Genome') };
 BEGIN { use_ok('CoGe::Format::GenomicSequence') };
 BEGIN { use_ok('CoGe::Format::GenomicSequenceType') };
@@ -27,6 +28,7 @@ BEGIN { use_ok('CoGe::REST::API::get::data_source::id') };
 BEGIN { use_ok('CoGe::REST::API::get::dataset') };
 BEGIN { use_ok('CoGe::REST::API::get::dataset::id') };
 BEGIN { use_ok('CoGe::REST::API::get::dataset::id::features') };
+BEGIN { use_ok('CoGe::REST::API::get::dataset::id::feature_summary') };
 BEGIN { use_ok('CoGe::REST::API::get::genome') };
 BEGIN { use_ok('CoGe::REST::API::get::genome::id') };
 BEGIN { use_ok('CoGe::REST::API::get::genome::id::genomic_sequences') };
