@@ -47,6 +47,7 @@ lib/CoGe/REST/API/get/feature/id/locations.pm
 lib/CoGe/REST/API/get/feature/id/sequences.pm
 lib/CoGe/REST/API/get/feature_name.pm
 lib/CoGe/REST/API/get/feature_name/id.pm
+lib/CoGe/REST/API/get/feature_name/id/annotation.pm
 lib/CoGe/REST/API/get/feature_type.pm
 lib/CoGe/REST/API/get/feature_type/id.pm
 lib/CoGe/REST/API/get/genome.pm

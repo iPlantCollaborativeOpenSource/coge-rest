@@ -5,10 +5,12 @@ use strict;
 
 use CoGe::Format::FeatureName;
 use CoGe::REST::AbstractObjectGetter;
+use CoGe::REST::API::get::feature_name::id::annotation;
 use CoGeX;
 
 use base 'CoGe::REST::AbstractObjectGetter';
 {
+
     sub new {
         my ( $class, $id ) = @_;
 
