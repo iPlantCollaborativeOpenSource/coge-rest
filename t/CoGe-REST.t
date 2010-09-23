@@ -6,7 +6,7 @@ use strict;
 
 #########################
 
-use Test::More tests => 63;
+use Test::More tests => 65;
 BEGIN { use_ok('CoGe::Format') };
 BEGIN { use_ok('CoGe::Format::Annotation') };
 BEGIN { use_ok('CoGe::Format::AnnotationType') };
@@ -56,6 +56,8 @@ BEGIN { use_ok('CoGe::REST::API::get::genome::id') };
 BEGIN { use_ok('CoGe::REST::API::get::genome::id::datasets') };
 BEGIN { use_ok('CoGe::REST::API::get::genome::id::feature_summary') };
 BEGIN { use_ok('CoGe::REST::API::get::genome::id::genomic_sequences') };
+BEGIN { use_ok('CoGe::REST::API::get::genomic_sequence') };
+BEGIN { use_ok('CoGe::REST::API::get::genomic_sequence::id') };
 BEGIN { use_ok('CoGe::REST::API::get::genomic_sequence_type') };
 BEGIN { use_ok('CoGe::REST::API::get::genomic_sequence_type::id') };
 BEGIN { use_ok('CoGe::REST::API::get::location') };

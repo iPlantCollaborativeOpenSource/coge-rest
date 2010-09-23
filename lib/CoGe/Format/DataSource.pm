@@ -6,7 +6,9 @@ use strict;
 use CoGe::Format;
 use Readonly;
 
-Readonly my %URL_PATTERN_FOR => ();
+Readonly my %URL_PATTERN_FOR => (
+    'data_source_url' => '/coge/get/data_source/${data_source_id}',
+);
 
 use base 'CoGe::Format';
 {
