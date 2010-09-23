@@ -15,6 +15,7 @@ lib/CoGe/Format/GenomicSequenceType.pm
 lib/CoGe/Format/Location.pm
 lib/CoGe/Format/Organism.pm
 lib/CoGe/Format/Sequence.pm
+lib/CoGe/Format/SequenceType.pm
 lib/CoGe/REST.pm
 lib/CoGe/REST/AbstractObjectGetter.pm
 lib/CoGe/REST/AbstractObjectListGetter.pm
@@ -60,6 +61,8 @@ lib/CoGe/REST/API/get/organism/id/current_genome.pm
 lib/CoGe/REST/API/get/organism/id/genomes.pm
 lib/CoGe/REST/API/get/sequence.pm
 lib/CoGe/REST/API/get/sequence/id.pm
+lib/CoGe/REST/API/get/sequence_type.pm
+lib/CoGe/REST/API/get/sequence_type/id.pm
 lib/CoGe/REST/API/search.pm
 lib/CoGe/REST/API/search/organisms.pm
 lib/CoGe/REST/API/search/organisms/by_description.pm
