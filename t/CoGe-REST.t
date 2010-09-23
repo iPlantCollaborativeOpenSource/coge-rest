@@ -6,7 +6,7 @@ use strict;
 
 #########################
 
-use Test::More tests => 60;
+use Test::More tests => 63;
 BEGIN { use_ok('CoGe::Format') };
 BEGIN { use_ok('CoGe::Format::Annotation') };
 BEGIN { use_ok('CoGe::Format::AnnotationType') };
@@ -22,6 +22,7 @@ BEGIN { use_ok('CoGe::Format::GenomicSequence') };
 BEGIN { use_ok('CoGe::Format::GenomicSequenceType') };
 BEGIN { use_ok('CoGe::Format::Location') };
 BEGIN { use_ok('CoGe::Format::Organism') };
+BEGIN { use_ok('CoGe::Format::Sequence') };
 BEGIN { use_ok('CoGe::REST') };
 BEGIN { use_ok('CoGe::REST::API') };
 BEGIN { use_ok('CoGe::REST::AbstractObjectGetter') };
@@ -63,6 +64,8 @@ BEGIN { use_ok('CoGe::REST::API::get::organism') };
 BEGIN { use_ok('CoGe::REST::API::get::organism::id') };
 BEGIN { use_ok('CoGe::REST::API::get::organism::id::current_genome') };
 BEGIN { use_ok('CoGe::REST::API::get::organism::id::genomes') };
+BEGIN { use_ok('CoGe::REST::API::get::sequence') };
+BEGIN { use_ok('CoGe::REST::API::get::sequence::id') };
 BEGIN { use_ok('CoGe::REST::API::search') };
 BEGIN { use_ok('CoGe::REST::API::search::organisms') };
 BEGIN { use_ok('CoGe::REST::API::search::organisms::by_name') };
