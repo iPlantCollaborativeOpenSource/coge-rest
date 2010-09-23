@@ -6,12 +6,13 @@ use strict;
 
 #########################
 
-use Test::More tests => 37;
+use Test::More tests => 42;
 BEGIN { use_ok('CoGe::Format') };
 BEGIN { use_ok('CoGe::Format::Dataset') };
 BEGIN { use_ok('CoGe::Format::DataSource') };
 BEGIN { use_ok('CoGe::Format::Feature') };
 BEGIN { use_ok('CoGe::Format::FeatureSummary') };
+BEGIN { use_ok('CoGe::Format::FeatureType') };
 BEGIN { use_ok('CoGe::Format::Genome') };
 BEGIN { use_ok('CoGe::Format::GenomicSequence') };
 BEGIN { use_ok('CoGe::Format::GenomicSequenceType') };
@@ -29,6 +30,10 @@ BEGIN { use_ok('CoGe::REST::API::get::dataset') };
 BEGIN { use_ok('CoGe::REST::API::get::dataset::id') };
 BEGIN { use_ok('CoGe::REST::API::get::dataset::id::features') };
 BEGIN { use_ok('CoGe::REST::API::get::dataset::id::feature_summary') };
+BEGIN { use_ok('CoGe::REST::API::get::feature') };
+BEGIN { use_ok('CoGe::REST::API::get::feature::id') };
+BEGIN { use_ok('CoGe::REST::API::get::feature_type') };
+BEGIN { use_ok('CoGe::REST::API::get::feature_type::id') };
 BEGIN { use_ok('CoGe::REST::API::get::genome') };
 BEGIN { use_ok('CoGe::REST::API::get::genome::id') };
 BEGIN { use_ok('CoGe::REST::API::get::genome::id::datasets') };
