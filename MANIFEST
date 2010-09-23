@@ -28,6 +28,7 @@ lib/CoGe/REST/API/get/annotation/id.pm
 lib/CoGe/REST/API/get/annotation/id/feature_name.pm
 lib/CoGe/REST/API/get/annotation_type.pm
 lib/CoGe/REST/API/get/annotation_type/id.pm
+lib/CoGe/REST/API/get/annotation_type/id/annotations.pm
 lib/CoGe/REST/API/get/annotation_type_group.pm
 lib/CoGe/REST/API/get/annotation_type_group/id.pm
 lib/CoGe/REST/API/get/data_source.pm

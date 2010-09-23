@@ -5,6 +5,7 @@ use strict;
 
 use CoGe::Format::AnnotationType;
 use CoGe::REST::AbstractObjectGetter;
+use CoGe::REST::API::get::annotation_type::id::annotations;
 use CoGeX;
 
 use base 'CoGe::REST::AbstractObjectGetter';
