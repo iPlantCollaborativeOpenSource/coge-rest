@@ -1,12 +1,10 @@
-package CoGe::REST::API::get::feature::id;
+package CoGe::REST::API::get::annotation::id;
 
 use warnings;
 use strict;
 
-use CoGe::Format::Feature;
+use CoGe::Format::Annotation;
 use CoGe::REST::AbstractObjectGetter;
-use CoGe::REST::API::get::feature::id::annotations;
-use CoGe::REST::API::get::feature::id::feature_names;
 use CoGeX;
 
 use base 'CoGe::REST::AbstractObjectGetter';
@@ -15,7 +13,7 @@ use base 'CoGe::REST::AbstractObjectGetter';
         my ( $class, $id ) = @_;
 
         # Create the formatter for objects that we fetch.
-        my $formatter = CoGe::Format::Feature->new();
+        my $formatter = CoGe::Format::Annotation->new();
 
         # Create the class instance.
         my $self = $class->SUPER::new( $id, $formatter );
@@ -28,9 +26,9 @@ use base 'CoGe::REST::AbstractObjectGetter';
 
         # Find the matching object.
         my $coge = CoGeX->dbconnect();
-        my ($data_source) = $coge->resultset('Feature')->find($id);
+        my ($annotation) = $coge->resultset('Annotation')->find($id);
 
-        return $data_source;
+        return $annotation;
     }
 }
 
