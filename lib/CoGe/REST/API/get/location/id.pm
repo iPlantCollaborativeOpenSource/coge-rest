@@ -3,7 +3,7 @@ package CoGe::REST::API::get::location::id;
 use warnings;
 use strict;
 
-use CoGe::Format::AnnotationType;
+use CoGe::Format::Location;
 use CoGe::REST::AbstractObjectGetter;
 use CoGeX;
 
@@ -13,7 +13,7 @@ use base 'CoGe::REST::AbstractObjectGetter';
         my ( $class, $id ) = @_;
 
         # Create the formatter for objects that we fetch.
-        my $formatter = CoGe::Format::AnnotationType->new();
+        my $formatter = CoGe::Format::Location->new();
 
         # Create the class instance.
         my $self = $class->SUPER::new( $id, $formatter );

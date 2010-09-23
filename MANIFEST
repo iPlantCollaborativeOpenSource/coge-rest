@@ -38,6 +38,7 @@ lib/CoGe/REST/API/get/feature/id.pm
 lib/CoGe/REST/API/get/feature/id/annotations.pm
 lib/CoGe/REST/API/get/feature/id/feature_names.pm
 lib/CoGe/REST/API/get/feature/id/locations.pm
+lib/CoGe/REST/API/get/feature/id/sequences.pm
 lib/CoGe/REST/API/get/feature_name.pm
 lib/CoGe/REST/API/get/feature_name/id.pm
 lib/CoGe/REST/API/get/feature_type.pm

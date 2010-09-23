@@ -8,6 +8,7 @@ use CoGe::REST::AbstractObjectGetter;
 use CoGe::REST::API::get::feature::id::annotations;
 use CoGe::REST::API::get::feature::id::feature_names;
 use CoGe::REST::API::get::feature::id::locations;
+use CoGe::REST::API::get::feature::id::sequences;
 use CoGeX;
 
 use base 'CoGe::REST::AbstractObjectGetter';
