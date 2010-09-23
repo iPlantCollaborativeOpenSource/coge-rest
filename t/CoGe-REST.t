@@ -6,7 +6,7 @@ use strict;
 
 #########################
 
-use Test::More tests => 71;
+use Test::More tests => 72;
 BEGIN { use_ok('CoGe::Format') };
 BEGIN { use_ok('CoGe::Format::Annotation') };
 BEGIN { use_ok('CoGe::Format::AnnotationType') };
@@ -34,6 +34,7 @@ BEGIN { use_ok('CoGe::REST::API') };
 BEGIN { use_ok('CoGe::REST::API::get') };
 BEGIN { use_ok('CoGe::REST::API::get::annotation') };
 BEGIN { use_ok('CoGe::REST::API::get::annotation::id') };
+BEGIN { use_ok('CoGe::REST::API::get::annotation::id::feature_name') };
 BEGIN { use_ok('CoGe::REST::API::get::annotation_type') };
 BEGIN { use_ok('CoGe::REST::API::get::annotation_type::id') };
 BEGIN { use_ok('CoGe::REST::API::get::annotation_type_group') };
