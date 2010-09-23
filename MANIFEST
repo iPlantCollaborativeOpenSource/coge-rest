@@ -34,6 +34,7 @@ lib/CoGe/REST/API/get/annotation_type_group/id.pm
 lib/CoGe/REST/API/get/annotation_type_group/id/annotation_types.pm
 lib/CoGe/REST/API/get/data_source.pm
 lib/CoGe/REST/API/get/data_source/id.pm
+lib/CoGe/REST/API/get/data_source/id/datasets.pm
 lib/CoGe/REST/API/get/dataset.pm
 lib/CoGe/REST/API/get/dataset/id.pm
 lib/CoGe/REST/API/get/dataset/id/feature_summary.pm
