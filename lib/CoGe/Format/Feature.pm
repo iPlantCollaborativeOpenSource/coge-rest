@@ -11,6 +11,7 @@ Readonly my %URL_PATTERN_FOR => (
     'feature_names_url' => '/coge/get/feature/${feature_id}/feature_names',
     'feature_type_url'  => '/coge/get/feature_type/${feature_type_id}',
     'feature_url'       => '/coge/get/feature/${feature_id}',
+    'locations_url'     => '/coge/get/feature/${feature_id}/locations',
 );
 
 use base 'CoGe::Format';

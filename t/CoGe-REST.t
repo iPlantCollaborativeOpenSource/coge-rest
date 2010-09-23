@@ -6,7 +6,7 @@ use strict;
 
 #########################
 
-use Test::More tests => 56;
+use Test::More tests => 60;
 BEGIN { use_ok('CoGe::Format') };
 BEGIN { use_ok('CoGe::Format::Annotation') };
 BEGIN { use_ok('CoGe::Format::AnnotationType') };
@@ -20,6 +20,7 @@ BEGIN { use_ok('CoGe::Format::FeatureType') };
 BEGIN { use_ok('CoGe::Format::Genome') };
 BEGIN { use_ok('CoGe::Format::GenomicSequence') };
 BEGIN { use_ok('CoGe::Format::GenomicSequenceType') };
+BEGIN { use_ok('CoGe::Format::Location') };
 BEGIN { use_ok('CoGe::Format::Organism') };
 BEGIN { use_ok('CoGe::REST') };
 BEGIN { use_ok('CoGe::REST::API') };
@@ -44,6 +45,7 @@ BEGIN { use_ok('CoGe::REST::API::get::feature') };
 BEGIN { use_ok('CoGe::REST::API::get::feature::id') };
 BEGIN { use_ok('CoGe::REST::API::get::feature::id::annotations') };
 BEGIN { use_ok('CoGe::REST::API::get::feature::id::feature_names') };
+BEGIN { use_ok('CoGe::REST::API::get::feature::id::locations') };
 BEGIN { use_ok('CoGe::REST::API::get::feature_type') };
 BEGIN { use_ok('CoGe::REST::API::get::feature_name') };
 BEGIN { use_ok('CoGe::REST::API::get::feature_name::id') };
@@ -55,6 +57,8 @@ BEGIN { use_ok('CoGe::REST::API::get::genome::id::feature_summary') };
 BEGIN { use_ok('CoGe::REST::API::get::genome::id::genomic_sequences') };
 BEGIN { use_ok('CoGe::REST::API::get::genomic_sequence_type') };
 BEGIN { use_ok('CoGe::REST::API::get::genomic_sequence_type::id') };
+BEGIN { use_ok('CoGe::REST::API::get::location') };
+BEGIN { use_ok('CoGe::REST::API::get::location::id') };
 BEGIN { use_ok('CoGe::REST::API::get::organism') };
 BEGIN { use_ok('CoGe::REST::API::get::organism::id') };
 BEGIN { use_ok('CoGe::REST::API::get::organism::id::current_genome') };
