@@ -6,6 +6,7 @@ use strict;
 use CoGe::Format::Genome;
 use CoGe::REST::AbstractObjectGetter;
 use CoGe::REST::API::get::genome::id::datasets;
+use CoGe::REST::API::get::genome::id::feature_summary;
 use CoGe::REST::API::get::genome::id::genomic_sequences;
 use CoGeX;
 
