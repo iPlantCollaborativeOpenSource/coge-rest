@@ -2,6 +2,7 @@ Changes
 lib/CoGe/Format.pm
 lib/CoGe/Format/Annotation.pm
 lib/CoGe/Format/AnnotationType.pm
+lib/CoGe/Format/AnnotationTypeGroup.pm
 lib/CoGe/Format/Dataset.pm
 lib/CoGe/Format/DataSource.pm
 lib/CoGe/Format/Feature.pm
@@ -22,6 +23,8 @@ lib/CoGe/REST/API/get/annotation.pm
 lib/CoGe/REST/API/get/annotation/id.pm
 lib/CoGe/REST/API/get/annotation_type.pm
 lib/CoGe/REST/API/get/annotation_type/id.pm
+lib/CoGe/REST/API/get/annotation_type_group.pm
+lib/CoGe/REST/API/get/annotation_type_group/id.pm
 lib/CoGe/REST/API/get/data_source.pm
 lib/CoGe/REST/API/get/data_source/id.pm
 lib/CoGe/REST/API/get/dataset.pm
