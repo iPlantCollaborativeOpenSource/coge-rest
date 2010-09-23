@@ -30,9 +30,9 @@ use base 'CoGe::REST::AbstractObjectGetter';
 
         # Find the matching object.
         my $coge = CoGeX->dbconnect();
-        my ($data_source) = $coge->resultset('Feature')->find($id);
+        my ($feature) = $coge->resultset('Feature')->find($id);
 
-        return $data_source;
+        return $feature;
     }
 }
 

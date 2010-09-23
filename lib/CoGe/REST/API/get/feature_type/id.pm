@@ -26,9 +26,9 @@ use base 'CoGe::REST::AbstractObjectGetter';
 
         # Find the matching object.
         my $coge = CoGeX->dbconnect();
-        my ($data_source) = $coge->resultset('FeatureType')->find($id);
+        my ($feature_type) = $coge->resultset('FeatureType')->find($id);
 
-        return $data_source;
+        return $feature_type;
     }
 }
 

@@ -27,11 +27,11 @@ use base 'CoGe::REST::AbstractObjectListGetter';
 
         # Fetch the dataset.
         my $coge   = CoGeX->dbconnect();
-        my $genome = $coge->resultset('Dataset')->find($id);
-        return if !defined $genome;
+        my $dataset = $coge->resultset('Dataset')->find($id);
+        return if !defined $dataset;
 
         # Return the list of features.
-        return [ $genome->features() ];
+        return [ $dataset->features() ];
     }
 }
 

@@ -26,9 +26,9 @@ use base 'CoGe::REST::AbstractObjectGetter';
 
         # Find the matching object.
         my $coge = CoGeX->dbconnect();
-        my ($genome) = $coge->resultset('GenomicSequenceType')->find($id);
+        my ($sequence) = $coge->resultset('GenomicSequenceType')->find($id);
 
-        return $genome;
+        return $sequence;
     }
 }
 
