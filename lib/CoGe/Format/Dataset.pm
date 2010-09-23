@@ -13,6 +13,7 @@ Readonly my %URL_PATTERN_FOR => (
     'dataset_url'         => $DATASET . '${dataset_id}',
     'data_source_url'     => $DATA_SOURCE . '${data_source_id}',
     'feature_summary_url' => $DATASET . '${dataset_id}/feature_summary',
+    'features_url'        => $DATASET . '${dataset_id}/features',
 );
 
 use base 'CoGe::Format';
