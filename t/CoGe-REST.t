@@ -6,7 +6,7 @@ use strict;
 
 #########################
 
-use Test::More tests => 69;
+use Test::More tests => 71;
 BEGIN { use_ok('CoGe::Format') };
 BEGIN { use_ok('CoGe::Format::Annotation') };
 BEGIN { use_ok('CoGe::Format::AnnotationType') };
@@ -25,11 +25,12 @@ BEGIN { use_ok('CoGe::Format::Organism') };
 BEGIN { use_ok('CoGe::Format::Sequence') };
 BEGIN { use_ok('CoGe::Format::SequenceType') };
 BEGIN { use_ok('CoGe::REST') };
-BEGIN { use_ok('CoGe::REST::API') };
+BEGIN { use_ok('CoGe::REST::AbstractObjectByIdGetter') };
 BEGIN { use_ok('CoGe::REST::AbstractObjectGetter') };
 BEGIN { use_ok('CoGe::REST::AbstractObjectListGetter') };
 BEGIN { use_ok('CoGe::REST::AbstractSearch') };
 BEGIN { use_ok('CoGe::REST::Handler') };
+BEGIN { use_ok('CoGe::REST::API') };
 BEGIN { use_ok('CoGe::REST::API::get') };
 BEGIN { use_ok('CoGe::REST::API::get::annotation') };
 BEGIN { use_ok('CoGe::REST::API::get::annotation::id') };
@@ -76,6 +77,7 @@ BEGIN { use_ok('CoGe::REST::API::search') };
 BEGIN { use_ok('CoGe::REST::API::search::organisms') };
 BEGIN { use_ok('CoGe::REST::API::search::organisms::by_name') };
 BEGIN { use_ok('CoGe::REST::API::search::organisms::by_description') };
+BEGIN { use_ok('CoGe::Utils::PackageUtils') };
 
 #########################
 
