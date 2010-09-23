@@ -6,10 +6,15 @@ use strict;
 use CoGe::Format;
 use Readonly;
 
+Readonly my $ANNOTATION_TYPES =>
+    '/coge/get/annotation_type_group/${annotation_type_group_id}'
+    . '/annotation_types';
+
 Readonly my $ANNOTATION_TYPE_GROUP =>
     '/coge/get/annotation_type_group/${annotation_type_group_id}';
 
 Readonly my %URL_PATTERN_FOR => (
+    'annotation_types_url'      => $ANNOTATION_TYPES,
     'annotation_type_group_url' => $ANNOTATION_TYPE_GROUP,
 );
 
