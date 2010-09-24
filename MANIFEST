@@ -50,7 +50,6 @@ lib/CoGe/REST/API/get/feature_name/id.pm
 lib/CoGe/REST/API/get/feature_name/id/annotation.pm
 lib/CoGe/REST/API/get/feature_type.pm
 lib/CoGe/REST/API/get/feature_type/id.pm
-lib/CoGe/REST/API/get/feature_type/id/features.pm
 lib/CoGe/REST/API/get/genome.pm
 lib/CoGe/REST/API/get/genome/id.pm
 lib/CoGe/REST/API/get/genome/id/datasets.pm
@@ -78,7 +77,6 @@ lib/CoGe/REST/API/search/organisms.pm
 lib/CoGe/REST/API/search/organisms/by_description.pm
 lib/CoGe/REST/API/search/organisms/by_name.pm
 lib/CoGe/REST/Handler.pm
-lib/CoGe/Utils/PackageUtils.pm
 Makefile.PL
 MANIFEST
 README
