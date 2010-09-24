@@ -5,6 +5,7 @@ use strict;
 
 use CoGe::Format::GenomicSequenceType;
 use CoGe::REST::AbstractObjectGetter;
+use CoGe::REST::API::get::genomic_sequence_type::id::genomes;
 use CoGeX;
 
 use base 'CoGe::REST::AbstractObjectGetter';

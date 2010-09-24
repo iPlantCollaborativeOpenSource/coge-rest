@@ -60,6 +60,7 @@ lib/CoGe/REST/API/get/genomic_sequence.pm
 lib/CoGe/REST/API/get/genomic_sequence/id.pm
 lib/CoGe/REST/API/get/genomic_sequence_type.pm
 lib/CoGe/REST/API/get/genomic_sequence_type/id.pm
+lib/CoGe/REST/API/get/genomic_sequence_type/id/genomes.pm
 lib/CoGe/REST/API/get/location.pm
 lib/CoGe/REST/API/get/location/id.pm
 lib/CoGe/REST/API/get/organism.pm
