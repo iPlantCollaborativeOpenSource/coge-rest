@@ -6,7 +6,7 @@ use strict;
 
 #########################
 
-use Test::More tests => 79;
+use Test::More tests => 78;
 BEGIN { use_ok('CoGe::Format') };
 BEGIN { use_ok('CoGe::Format::Annotation') };
 BEGIN { use_ok('CoGe::Format::AnnotationType') };
@@ -85,7 +85,6 @@ BEGIN { use_ok('CoGe::REST::API::search') };
 BEGIN { use_ok('CoGe::REST::API::search::organisms') };
 BEGIN { use_ok('CoGe::REST::API::search::organisms::by_name') };
 BEGIN { use_ok('CoGe::REST::API::search::organisms::by_description') };
-BEGIN { use_ok('CoGe::Utils::PackageUtils') };
 
 #########################
 
