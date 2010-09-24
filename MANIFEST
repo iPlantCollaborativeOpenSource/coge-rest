@@ -66,7 +66,9 @@ lib/CoGe/REST/API/get/location/id.pm
 lib/CoGe/REST/API/get/organism.pm
 lib/CoGe/REST/API/get/organism/id.pm
 lib/CoGe/REST/API/get/organism/id/current_genome.pm
+lib/CoGe/REST/API/get/organism/id/datasets.pm
 lib/CoGe/REST/API/get/organism/id/genomes.pm
+lib/CoGe/REST/API/get/organism/id/genomic_sequence_types.pm
 lib/CoGe/REST/API/get/sequence.pm
 lib/CoGe/REST/API/get/sequence/id.pm
 lib/CoGe/REST/API/get/sequence_type.pm

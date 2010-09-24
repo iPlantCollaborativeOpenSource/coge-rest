@@ -6,7 +6,9 @@ use strict;
 use CoGe::Format::Organism;
 use CoGe::REST::AbstractObjectGetter;
 use CoGe::REST::API::get::organism::id::current_genome;
+use CoGe::REST::API::get::organism::id::datasets;
 use CoGe::REST::API::get::organism::id::genomes;
+use CoGe::REST::API::get::organism::id::genomic_sequence_types;
 use CoGeX;
 
 use base 'CoGe::REST::AbstractObjectGetter';
