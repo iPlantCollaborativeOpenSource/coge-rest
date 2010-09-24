@@ -7,7 +7,6 @@ use CoGe::Format;
 use Readonly;
 
 Readonly my %URL_PATTERN_FOR => (
-    'features_url' => '/coge/get/feature_type/${feature_type_id}/features',
     'feature_type_url' => '/coge/get/feature_type/${feature_type_id}',
 );
 
